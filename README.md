@@ -1,5 +1,6 @@
 # HelloDynamo
 
+Learning Dynamo Web Framework For ElixirDose.com
 This is a project built with Elixir that uses Dynamo to serve web requests.
 
 Resources:

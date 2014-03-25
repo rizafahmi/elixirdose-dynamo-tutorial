@@ -1,5 +1,12 @@
 defmodule ApplicationRouter do
   use Dynamo.Router
+  Mongoex.Server.setup(address: 'localhost', port: 3001, database: :meteor)
+  Mongoex.Server.start
+
+  defmodule Contents do
+    use Mongoex.Base
+    fields title: nil
+  end
 
   prepare do
     # Pick which parts of the request you want to fetch
@@ -8,16 +15,13 @@ defmodule ApplicationRouter do
     conn.fetch([:cookies, :params])
   end
 
-  # It is common to break your Dynamo into many
-  # routers, forwarding the requests between them:
-  # forward "/posts", to: PostsRouter
-
-  get "/" do
-    conn = conn.assign(:title, "Welcome to Dynamo!")
-    render conn, "index.html"
+  defp get_all_articles do
+    Contents.find_all({})
   end
 
-  get "/hello" do
-    conn.resp 200, "Hello Dynamo!"
+  get "/blogs" do
+    conn = conn.assign(:title, "Welcome to Dynamo Blog!")
+    articles = get_all_articles
+    render conn, "index.html", articles: articles
   end
 end

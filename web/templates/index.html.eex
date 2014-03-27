@@ -5,9 +5,15 @@
   <link rel="shortcut icon" href="/static/favicon.ico" />
 </head>
 <body>
+  <h1>Hello, dynamo!</h1>
+  <pre>
+    <%= @articles %>
+  </pre>
   <ul>
-
-    <li>Change this template at <code>web/templates/index.html.eex</code></li>
+    <!-- <%= lc { _id, category, datePublish, title, url } inlist @articles do %> -->
+    <!--   <li><%= title %></li> -->
+    <!-- <% end %> -->
+    
   </ul>
 </body>
 </html>

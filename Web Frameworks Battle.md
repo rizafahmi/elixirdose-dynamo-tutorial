@@ -136,5 +136,11 @@ Now we're ready to write Elixir methods for creating and reading blog articles. 
 	[web/router/application_router.ex]
 
 First, we assign title to display "Welcome to Dynamo Blog" for browser's title. Then we get articles that call private function `get_all_articles` to get all articles. Lastly, we render it with the template `index.html` and articles data. Now let's open `index.html.eex` and make it display all articles.
+
+If you notice, in router file we mention `index.html` but the actual filename in template is `index.html.eex`. Dynamo templates uses [EEx](http://elixir-lang.org/docs/stable/EEx.html) to let you embed Elixir logic into your HTML template.
+
+And since we also render `index.html` with articles variable, `articles` will available in the templates. To display each articles we use iteration.
+
+ 
 	
  

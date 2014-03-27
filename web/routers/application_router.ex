@@ -21,7 +21,9 @@ defmodule ApplicationRouter do
 
   get "/blogs" do
     conn = conn.assign(:title, "Welcome to Dynamo Blog!")
-    articles = get_all_articles
+    articles = get_all_articles |> Stream.map(fn(article) ->
+      [title: article.title] end)
+    is_list articles
     render conn, "index.html", articles: articles
   end
 end

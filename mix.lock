@@ -1,12 +1,16 @@
-[ "bson": {:git, "git://github.com/mongodb/bson-erlang", "6d3cc910eac6d4c21402427b41c411e201eca424", [ref: "HEAD"]},
+[ "bson": {:git, "git://github.com/checkiz/elixir-bson.git", "42b40f3becb9e842d1d5738502e45189eff56525", [tag: "0.1"]},
   "cowboy": {:git, "git://github.com/extend/cowboy.git", "8993249e421fbfff603cedec70e90be64d3694e6", []},
   "cowlib": {:git, "git://github.com/extend/cowlib.git", "0d4ece08a7cce90a07cf33d4edad29bc324c7d90", [ref: "0.5.1"]},
   "dynamo": {:git, "git://github.com/elixir-lang/dynamo.git", "30bc34381000f71bc90687c9de36bba3c29a280d", []},
+  "finalizer": {:git, "git://github.com/meh/elixir-finalizer.git", "4aca66d89082340e7f91d0b931d198e3e7361097", []},
   "genomu": {:git, "git://github.com/genomu/genomu.git", "fa54e9673dc7d7b3c3d953a5bf521f54b51431cc", []},
   "hackney": {:git, "git://github.com/benoitc/hackney.git", "7f2a0b5996313d930277786e7ff5d538e9346547", [tag: "0.10.1"]},
   "hackney_lib": {:git, "https://github.com/benoitc/hackney_lib.git", "eecdb481f1d38bfb194896bffdf9bdcdd967ae96", [tag: "0.2.2"]},
   "mime": {:git, "git://github.com/dynamo/mime.git", "db84370c53a67a7e58a4d0cfb026f4edc64a9367", []},
   "mimetypes": {:git, "git://github.com/spawngrid/mimetypes.git", "47d37a977a7d633199822bf6b08353007483d00f", [ref: "master"]},
+  "mongo": {:git, "git://github.com/checkiz/elixir-mongo.git", "d407df8f81a1f24b1961d7b83c6988b6847c391e", [tag: "0.1"]},
   "mongodb": {:git, "git://github.com/mururu/mongodb-erlang.git", "4c640620bf2ab82d9be85d527a229cd6b60a4c02", []},
   "mongoex": {:git, "git://github.com/mururu/mongoex.git", "de58649150a408f6ac3a97fe9b14870173e4dc4a", []},
-  "ranch": {:git, "git://github.com/extend/ranch.git", "5df1f222f94e08abdcab7084f5e13027143cc222", [ref: "0.9.0"]} ]
+  "ranch": {:git, "git://github.com/extend/ranch.git", "5df1f222f94e08abdcab7084f5e13027143cc222", [ref: "0.9.0"]},
+  "resource": {:git, "git://github.com/tonyrog/resource.git", "b9e1adcadcc8cb59130e0bbecbbe6777bb8d7c78", []},
+  "socket": {:git, "git://github.com/meh/elixir-socket.git", "9996aad14d273ad37d00f57f26fbe3d839b397a4", []} ]

@@ -100,7 +100,7 @@ Then we need to get the dependencies and download the driver and compile it usin
 	$> mix deps.get
 	$> mix deps.compile
 
-Now mongodb are ready to use. First, we need to setup the connection to mongodb and start the driver. For the sake of simplicity, let's add this into `application_router.ex` file.
+Now mongodb are ready to use. First, we need to setup the connection to mongodb and start the driver. Let's add a connection in `web/routes/application_router.ex` file.
 
 	defmodule ApplicationRouter do
 		use Dynamo.Router
@@ -108,17 +108,17 @@ Now mongodb are ready to use. First, we need to setup the connection to mongodb 
 		Mongoex.Server.start
 
 	…
-	[web/router/application_router.ex]
+	[lib/hello_dynamo.ex]
 
 Mongoex use model layer to define our document or table. So first we need to add model module.
 
-	defmodule Contents do
+	defmodule Content do
 		use Mongoex.Base
 		fields title: nil, body: nil
 	end
 
 	…
-	[web/router/application_router.ex]
+	[lib/models/contents.ex]
 
 #### Creating And Reading Article
 

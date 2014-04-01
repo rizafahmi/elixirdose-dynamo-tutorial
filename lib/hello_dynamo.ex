@@ -1,5 +1,7 @@
 defmodule HelloDynamo do
   use Application.Behaviour
+  Mongoex.Server.setup(address: 'localhost', port: 3001, database: :dynamo)
+  Mongoex.Server.start
 
   @doc """
   The application callback used to start this
